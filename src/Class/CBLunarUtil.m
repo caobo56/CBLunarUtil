@@ -138,7 +138,7 @@
             m_index = 1;
         }
     }
-    y_str = [chineseYears objectAtIndex:y_index];
+    y_str = [chineseYears objectAtIndex:(long)y_index];
     return y_str;
 }
 
@@ -180,7 +180,7 @@
  */
 +(NSInteger)mouthZhiIndexFromDate:(NSDate *)inputdate{
     NSInteger year = [DateUtils numberOfYearIn:inputdate];
-    NSMutableArray * jieArr = [NSMutableArray arrayWithArray:(NSArray *)[JsonFileUtils dataWithJsonFile:[NSString stringWithFormat:(@"%ld"),year]]];
+    NSMutableArray * jieArr = [NSMutableArray arrayWithArray:(NSArray *)[JsonFileUtils dataWithJsonFile:[NSString stringWithFormat:(@"%ld"),(long)year]]];
     NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"time" ascending:YES]];
     [jieArr sortUsingDescriptors:sortDescriptors];
     int index = 0;
