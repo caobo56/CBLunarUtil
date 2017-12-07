@@ -105,4 +105,6 @@
 		 @return 当日宜忌
 		 */
 		+(NSDictionary *)YiJi:(NSDate *)inputDate;
+
+		
 		@end
