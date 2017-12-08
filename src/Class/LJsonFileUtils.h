@@ -1,5 +1,5 @@
 //
-//  JsonFileUtils.h
+//  LJsonFileUtils.h
 //  CorderAlmanac
 //
 //  Created by caobo56 on 2017/11/22.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JsonFileUtils : NSObject
+@interface LJsonFileUtils : NSObject
 
 +(id)dataWithJsonFile:(NSString *)name;
 

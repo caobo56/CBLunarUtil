@@ -1,18 +1,18 @@
 //
-//  JsonFileUtils.m
+//  LJsonFileUtils.m
 //  CorderAlmanac
 //
 //  Created by caobo56 on 2017/11/22.
 //  Copyright © 2017年 caobo56. All rights reserved.
 //
 
-#import "JsonFileUtils.h"
+#import "LJsonFileUtils.h"
 
-@implementation JsonFileUtils
+@implementation LJsonFileUtils
 
 +(id)dataWithJsonFile:(NSString *)name{
     NSData *JSONData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:@"json"]];
-    id data = [JsonFileUtils toArrayOrNSDictionary:JSONData];
+    id data = [LJsonFileUtils toArrayOrNSDictionary:JSONData];
     if([data isKindOfClass:[NSString class]]){
         NSData *nsData=[data dataUsingEncoding:NSUTF8StringEncoding];
         data = [NSJSONSerialization JSONObjectWithData:nsData options:kNilOptions error:nil];

@@ -8,7 +8,7 @@
 
 #import "CBLunarUtil.h"
 #import "DateUtils.h"
-#import "JsonFileUtils.h"
+#import "LJsonFileUtils.h"
 
 @implementation CBLunarUtil
 
@@ -43,7 +43,7 @@
  */
 + (NSDate*)liChunDateFromDate:(NSDate *)inputDate{
     NSInteger year = [DateUtils numberOfYearIn:inputDate];
-    NSMutableArray * jieArr = [NSMutableArray arrayWithArray:(NSArray *)[JsonFileUtils dataWithJsonFile:[NSString stringWithFormat:(@"%ld"),(long)year]]];
+    NSMutableArray * jieArr = [NSMutableArray arrayWithArray:(NSArray *)[LJsonFileUtils dataWithJsonFile:[NSString stringWithFormat:(@"%ld"),(long)year]]];
     NSDictionary * dict = jieArr[0];
     NSString *str = [dict[@"time"] substringToIndex:10];
     return [DateUtils dateFromString:str];
@@ -51,7 +51,7 @@
 
 +(NSString *)jieqiFromDate:(NSDate *)inputDate{
     NSInteger year = [DateUtils numberOfYearIn:inputDate];
-    NSMutableArray * jieArr = [NSMutableArray arrayWithArray:(NSArray *)[JsonFileUtils dataWithJsonFile:[NSString stringWithFormat:(@"%ld"),(long)year]]];
+    NSMutableArray * jieArr = [NSMutableArray arrayWithArray:(NSArray *)[LJsonFileUtils dataWithJsonFile:[NSString stringWithFormat:(@"%ld"),(long)year]]];
     NSString * jieqi = @"";
     for (NSDictionary * item in jieArr) {
         NSString *day_str = [item[@"time"] substringToIndex:10];
@@ -180,7 +180,7 @@
  */
 +(NSInteger)mouthZhiIndexFromDate:(NSDate *)inputdate{
     NSInteger year = [DateUtils numberOfYearIn:inputdate];
-    NSMutableArray * jieArr = [NSMutableArray arrayWithArray:(NSArray *)[JsonFileUtils dataWithJsonFile:[NSString stringWithFormat:(@"%ld"),(long)year]]];
+    NSMutableArray * jieArr = [NSMutableArray arrayWithArray:(NSArray *)[LJsonFileUtils dataWithJsonFile:[NSString stringWithFormat:(@"%ld"),(long)year]]];
     NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"time" ascending:YES]];
     [jieArr sortUsingDescriptors:sortDescriptors];
     int index = 0;
