@@ -17,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSDate * dat = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSString * str = [CBLunarUtil getChineseCalendarWithDate:dat format:@"mmdd"];
+    NSLog(@"%@",str);
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

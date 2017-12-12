@@ -49,7 +49,7 @@ typedef enum GanZhiState {
  @param date 输入日期
  @return return value 农历年日历
  */
-+ (NSString*)getChineseCalendarWithDate:(NSDate *)date;
++ (NSString*)getChineseCalendarWithDate:(NSDate *)date format:(NSString *)format;
 
 
 /**

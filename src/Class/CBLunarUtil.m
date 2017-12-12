@@ -71,7 +71,7 @@
  @param date 输入日期
  @return 返回干支年 农历月份 农历初几
  */
-+ (NSString*)getChineseCalendarWithDate:(NSDate *)date{
++ (NSString*)getChineseCalendarWithDate:(NSDate *)date format:(NSString *)format{
     NSArray *chineseMonths = [NSArray arrayWithObjects:
                             @"正月", @"二月", @"三月", @"四月", @"五月", @"六月", @"七月", @"八月",
                             @"九月", @"十月", @"冬月", @"腊月", nil];
@@ -80,15 +80,16 @@
                           @"初一", @"初二", @"初三", @"初四", @"初五", @"初六", @"初七", @"初八", @"初九", @"初十",
                           @"十一", @"十二", @"十三", @"十四", @"十五", @"十六", @"十七", @"十八", @"十九", @"二十",
                           @"廿一", @"廿二", @"廿三", @"廿四", @"廿五", @"廿六", @"廿七", @"廿八", @"廿九", @"三十",  nil];
-    
     NSCalendar *localeCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierChinese];
     unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
     NSDateComponents *localeComp = [localeCalendar components:unitFlags fromDate:date];
     NSString *y_str = [CBLunarUtil yearGanzhiStringFromDate:date type:StateNongLi];
     NSString *m_str = [chineseMonths objectAtIndex:localeComp.month-1];
     NSString *d_str = [chineseDays objectAtIndex:localeComp.day-1];
-    NSString *chineseCal_str =[NSString stringWithFormat: @"%@ %@ %@",y_str,m_str,d_str];
-    return chineseCal_str;
+    format = [format stringByReplacingOccurrencesOfString:@"yyyy" withString:y_str];
+    format = [format stringByReplacingOccurrencesOfString:@"mm" withString:m_str];
+    format = [format stringByReplacingOccurrencesOfString:@"dd" withString:d_str];
+    return format;
 }
 
 +(NSString *)zodiacStringFromDate:(NSDate *)inputDate type:(GanZhiState)type{
