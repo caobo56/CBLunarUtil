@@ -82,6 +82,16 @@
     return theComponents.day;
 }
 
++(NSDate *)theAfterDay:(NSDate *)inputDate{
+    NSDate *lastDay = [NSDate dateWithTimeInterval:+24*60*60 sinceDate:inputDate];
+    return lastDay;
+}
+
++(NSDate *)theBeforeDay:(NSDate *)inputDate{
+    NSDate *lastDay = [NSDate dateWithTimeInterval:-24*60*60 sinceDate:inputDate];
+    return lastDay;
+}
+
 /****
  ios比较日期大小默认会比较到天
  ****/

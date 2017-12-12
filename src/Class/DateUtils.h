@@ -26,6 +26,10 @@
 
 +(NSInteger)numberOfChinaDayIn:(NSDate *)inputDate;
 
++(NSDate *)theAfterDay:(NSDate *)inputDate;
+
++(NSDate *)theBeforeDay:(NSDate *)inputDate;
+
 /****
  ios比较日期大小默认会比较到天
  ****/
