@@ -45,8 +45,10 @@ typedef enum GanZhiState {
 
 /**
  获取农历年的日期，可以输入样式
-
+ 
  @param date 输入日期
+ @param format 输入格式@“yyyy-mm-dd”
+ yyyy表示年 mm表示月 dd表示日 格式顺序随意
  @return return value 农历年日历
  */
 + (NSString*)getChineseCalendarWithDate:(NSDate *)date format:(NSString *)format;
