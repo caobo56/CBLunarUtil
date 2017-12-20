@@ -30,6 +30,10 @@
 
 +(NSDate *)theBeforeDay:(NSDate *)inputDate;
 
++(NSDate *)theAfterMonth:(NSDate *)inputDate;
+
++(NSDate *)theBeforeMonth:(NSDate *)inputDate;
+
 /****
  ios比较日期大小默认会比较到天
  ****/
