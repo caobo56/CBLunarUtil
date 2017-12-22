@@ -179,7 +179,7 @@
  */
 +(NSString *)getWeekKeyStrWith:(NSDate *)date{
     NSInteger week_index = [DateUtils numberOfWeekIn:date];
-    NSArray * weekKeyArr = @[@"MON",@"TUE",@"WED",@"THU",@"FRI",@"SAT",@"SUN"];
+    NSArray * weekKeyArr = @[@"SUN",@"MON",@"TUE",@"WED",@"THU",@"FRI",@"SAT"];
     return weekKeyArr[week_index-1];
 }
 
