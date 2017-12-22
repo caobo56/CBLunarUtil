@@ -145,7 +145,7 @@
 
 
 /**
- 获取月份英文简称
+ 获取周几的英文简称
 
  @param date date description
  @return return value description
