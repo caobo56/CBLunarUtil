@@ -134,6 +134,24 @@
  */
 +(NSString *)getStrWith:(NSDate *)date FromFormatter:(NSString *)str;
 
+
+/**
+ 获取月份英文简称
+
+ @param date date description
+ @return return value description
+ */
++(NSString *)getMonthKeyStrWith:(NSDate *)date;
+
+
+/**
+ 获取月份英文简称
+
+ @param date date description
+ @return return value description
+ */
++(NSString *)getWeekKeyStrWith:(NSDate *)date;
+
 /**
  日期去掉时分秒
  

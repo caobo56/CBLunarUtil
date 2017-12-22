@@ -159,6 +159,31 @@
 }
 
 /**
+ 获取月份英文简称
+ 
+ @param date date description
+ @return return value description
+ */
++(NSString *)getMonthKeyStrWith:(NSDate *)date{
+    NSInteger month_index = [DateUtils numberOfMonthIn:date];
+    NSArray * monthKeyArr = @[@"JAN.",@"FEB.",@"MAR.",@"APR.",@"MAY.",@"JUN.",@"JUL.",@"AUG.",@"SEP.",@"OCT.",@"NOV.",@"DEC."];
+    return monthKeyArr[month_index-1];
+}
+
+
+/**
+ 获取月份英文简称
+ 
+ @param date date description
+ @return return value description
+ */
++(NSString *)getWeekKeyStrWith:(NSDate *)date{
+    NSInteger week_index = [DateUtils numberOfWeekIn:date];
+    NSArray * weekKeyArr = @[@"MON",@"TUE",@"WED",@"THU",@"FRI",@"SAT",@"SUN"];
+    return weekKeyArr[week_index-1];
+}
+
+/**
  日期去掉时分秒
  
  @param inputDate 日期
