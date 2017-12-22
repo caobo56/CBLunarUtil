@@ -146,6 +146,19 @@
 }
 
 /**
+ 用Formatter获取日期的str
+ 
+ @param str Formatter 'YYYY-MM-DD hh:mm:ss'
+ @return 日期的str
+ */
++(NSString *)getStrWith:(NSDate *)date FromFormatter:(NSString *)str{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = str;
+    NSString * dateStr = [formatter stringFromDate:date];
+    return dateStr;
+}
+
+/**
  日期去掉时分秒
  
  @param inputDate 日期
