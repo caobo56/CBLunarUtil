@@ -104,4 +104,13 @@ typedef enum GanZhiState {
  @return 当日宜忌
  */
 +(NSDictionary *)YiJi:(NSDate *)inputDate;
+
+/**
+ 根据日期获取星座
+ 
+ @param inputDate inputDate description
+ @return return value description
+ */
++(NSString *)getConstellationByDate:(NSDate *)inputDate;
+
 @end
