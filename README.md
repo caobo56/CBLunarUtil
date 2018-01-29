@@ -8,7 +8,9 @@ pod 'CBLunarUtil'
 ```
 整个项目分三个部分：
 1）最主要的是CBLunarUtil类，这个类里面全是类方法，支持对NSDate转换成农历和干支历的类方法。
+
 2）然后有一个DateUtils。这个类是对NSDate 的扩展，方便调用获取传入NSDate对象是月的第几天，星期几等。
+
 3）LJsonFileUtils是一个自定义的读取json文件的工具，仅有一个dataWithJsonFile的类函数。
 
 相关函数调用方式以及函数注释，都写在代码里了，可以直接查看使用。
