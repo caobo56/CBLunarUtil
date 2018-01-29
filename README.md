@@ -6,7 +6,8 @@
 ```
 pod 'CBLunarUtil'
 ```
-整个项目分三个部分：
+
+###整个项目分三个部分：
 
 1）最主要的是CBLunarUtil类，这个类里面全是类方法，支持对NSDate转换成农历和干支历的类方法。
 
@@ -17,6 +18,7 @@ pod 'CBLunarUtil'
 相关函数调用方式以及函数注释，都写在代码里了，可以直接查看使用。
 
 其中，CBLunarUtil 主要是依靠 NSDateComponents 作为核心代码，来核算相关数据。
+
 不得不说，iOS系统提供的这种方式极大的简化了原来阴阳历转换的代码。
 
 ### CBLunarUtil接口
